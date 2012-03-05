@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pictersDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="pictersDBModelStoreContainer">
+    <EntitySet Name="pictures" EntityType="pictersDBModel.Store.pictures" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="pictures">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nazva" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="avtor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="price" Type="money" Nullable="false" />
+  </EntityType>
+</Schema>

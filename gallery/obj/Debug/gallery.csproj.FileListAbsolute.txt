@@ -1,0 +1,5 @@
+C:\aspsite\gallery\gallery\bin\gallery.dll
+C:\aspsite\gallery\gallery\bin\gallery.pdb
+C:\aspsite\gallery\gallery\obj\Debug\ResolveAssemblyReference.cache
+C:\aspsite\gallery\gallery\obj\Debug\gallery.dll
+C:\aspsite\gallery\gallery\obj\Debug\gallery.pdb
