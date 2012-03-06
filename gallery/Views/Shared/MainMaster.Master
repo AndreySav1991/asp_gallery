@@ -56,7 +56,9 @@
  </script>
  <style media="screen,projection" type="text/css"> 
 
- *{margin:0;padding:0}
+     *{margin:0 0 0 110;
+padding:0
+     }
  body{padding:20px;background:white;text-align:center;background:black;color:#bba;font:80%/140% georgia,serif;}
  h1,h2{font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
  a{color:#348;text-decoration:none;outline:none;}
@@ -77,10 +79,35 @@
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
 </head>
 <body>
-    <div>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+    <form id="form1" runat="server">
+    <table style="width: 100%;" border="2" align="left" valign="top">
+          <tr>
+            <td> test </td>
+         </tr>
+         <tr>
+            <td height="22">
+              <table width="100%" border="2" align="left" valign="top">
+             <tr>
+               <td width="25%">
+                 <ul>
+                   <li><a href="/">Головна</a></li>
+                   <li><a href="/Home/Gallery">Купити картину</a></li>
+                 </ul>     </td>
+               <td width="75%">    <div>
+               <br />
+           <asp:ContentPlaceHolder ID="MainContent" runat="server">
+          </asp:ContentPlaceHolder>        
+        </div>   
+      </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td> tut footer</td>
+  </tr>
+    </table>
+
+    
+    </form>
 </body>
 </html>

@@ -8,29 +8,30 @@
 
     <h2>Gallery</h2>
 
-    <table>
+    <table border="1">
         <tr>
+            
             <th>
-                id
+              
             </th>
             <th>
-                nazva
+                Назва
             </th>
             <th>
-                avtor
+                Автор
             </th>
             <th>
-                img
+                Зображення
             </th>
             <th>
-                price
+                Ціна
             </th>
         </tr>
 
     <% foreach (var item in Model) { %>
         <tr>
             <td>
-                <%: item.id %>
+                <%: Html.ActionLink("Купити", "Details", new { id=item.id })%>
             </td>
             <td>
                 <%: item.nazva %>

@@ -23,6 +23,20 @@ namespace gallery.Controllers
             return View(picters);
         }
 
+        public ActionResult Details(int id = 2)
+        {
+            var picterDetal = (from picture in db.pictures
+                           where picture.id == id
+                           select picture).First();
+            return View(picterDetal);
+        }
+
+        public ActionResult Contact()
+        {
+            
+            return View();
+        }
+
 
     }
 }
