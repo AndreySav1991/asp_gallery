@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+</head>
+<body>
+    <div>
+    <table style="width: 100%;" border="2" align="left" valign="top">
+          <tr>
+            <td> <h1>Адністраторська частина для додавання, редагування картин</h1> </td>
+         </tr>
+         <tr>
+            <td height="22">
+              <table width="100%" border="2" align="left" valign="top">
+             <tr>
+               <td width="25%">
+                 <ul>
+                   <li><a href="/AndminPic">Головна</a></li>
+
+                 </ul>     </td>
+               <td width="75%">    <div>
+               <br />
+               <p> Відповідально та охайно заповнюйте дані!  </p>
+           <asp:ContentPlaceHolder ID="MainContent" runat="server">
+          </asp:ContentPlaceHolder>        
+        </div>   
+      </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>Адмінка для додавання картин</td>
+  </tr>
+    </table>
+    </div>
+</body>
+</html>
