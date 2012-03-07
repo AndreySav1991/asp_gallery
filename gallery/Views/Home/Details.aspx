@@ -27,7 +27,7 @@
     <p>
 
      
-        <%: Html.ActionLink("Back to List", "Gallery") %>
+        <%: Html.ActionLink("Назад", "Gallery") %>
     </p>
 
 </asp:Content>

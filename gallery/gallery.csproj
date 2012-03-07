@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AndminPicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -87,6 +88,22 @@
     <Content Include="App_Data\pictersDB_log.ldf">
       <DependentUpon>pictersDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\pict\0.jpg" />
+    <Content Include="Content\pict\1.jpg" />
+    <Content Include="Content\pict\10.jpg" />
+    <Content Include="Content\pict\11.jpg" />
+    <Content Include="Content\pict\12.jpg" />
+    <Content Include="Content\pict\13.jpg" />
+    <Content Include="Content\pict\14.jpg" />
+    <Content Include="Content\pict\15.jpg" />
+    <Content Include="Content\pict\2.jpg" />
+    <Content Include="Content\pict\3.jpg" />
+    <Content Include="Content\pict\4.jpg" />
+    <Content Include="Content\pict\5.jpg" />
+    <Content Include="Content\pict\6.jpg" />
+    <Content Include="Content\pict\7.jpg" />
+    <Content Include="Content\pict\8.jpg" />
+    <Content Include="Content\pict\9.jpg" />
     <Content Include="Global.asax" />
     <Content Include="images\body_all_bckg.jpg" />
     <Content Include="images\body_top_bckg.jpg" />
@@ -97,9 +114,16 @@
     <Content Include="js\galleria.css" />
     <Content Include="js\jquery00.js" />
     <Content Include="js\jquery01.js" />
+    <Content Include="Views\AndminPic\Create.aspx" />
+    <Content Include="Views\AndminPic\Delete.aspx" />
+    <Content Include="Views\AndminPic\Details.aspx" />
+    <Content Include="Views\AndminPic\Edit.aspx" />
+    <Content Include="Views\AndminPic\Index.aspx" />
+    <Content Include="Views\Home\Contact.aspx" />
     <Content Include="Views\Home\Details.aspx" />
     <Content Include="Views\Home\Gallery.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\EditorTemplates\picture.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -137,11 +161,10 @@
   <ItemGroup>
     <Content Include="Views\Shared\MainMaster.Master" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\pict\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="images\Thumbs.db" />
+    <Content Include="Views\Shared\AdminPic.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

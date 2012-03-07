@@ -92,6 +92,8 @@ padding:0
                  <ul>
                    <li><a href="/">Головна</a></li>
                    <li><a href="/Home/Gallery">Купити картину</a></li>
+                   <li><a href="/Home/Contact">Наші контакти</a></li>
+
                  </ul>     </td>
                <td width="75%">    <div>
                <br />
