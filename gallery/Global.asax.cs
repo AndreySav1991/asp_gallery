@@ -26,6 +26,7 @@ namespace gallery
 
         protected void Application_Start()
         {
+            AjaxHelper.GlobalizationScriptPath = "http://ajax.microsoft.com/ajax/4.0/1/globalization";
             AreaRegistration.RegisterAllAreas();
 
             RegisterRoutes(RouteTable.Routes);

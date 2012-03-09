@@ -5,8 +5,11 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h2>Edit</h2>
+    <%: Ajax.GlobalizationScript() %>
+    <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
+    <% Html.EnableClientValidation(); %>
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
