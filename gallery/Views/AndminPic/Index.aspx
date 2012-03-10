@@ -7,7 +7,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Головна </h2>
-
+            [ <%: Html.ActionLink("Выход", "LogOff", "Account") %> ]
+            <br />
     <table border="1">
         <tr>
             <th></th>

@@ -11,7 +11,7 @@ namespace gallery.Controllers
         private pictersDBEntities db = new pictersDBEntities();
         //
         // GET: /AndminPic/
-
+        [Authorize(Roles="Admins")]
         public ActionResult Index()
         {
             var picters = (from picture in db.pictures select picture).ToList();
@@ -20,7 +20,7 @@ namespace gallery.Controllers
 
         //
         // GET: /AndminPic/Details/5
-
+        [Authorize(Roles = "Admins")]
         public ActionResult Details(int id)
         {
             var picterDetal = (from picture in db.pictures
@@ -31,7 +31,7 @@ namespace gallery.Controllers
 
         //
         // GET: /AndminPic/Create
-
+        [Authorize(Roles = "Admins")]
         public ActionResult Create()
         {
             picture pict = new picture();
@@ -42,6 +42,7 @@ namespace gallery.Controllers
         // POST: /AndminPic/Create
 
         [HttpPost]
+        [Authorize(Roles = "Admins")]
         public ActionResult Create(picture pict)
         {
             try
@@ -62,7 +63,7 @@ namespace gallery.Controllers
         
         //
         // GET: /AndminPic/Edit/5
- 
+        [Authorize(Roles = "Admins")]
         public ActionResult Edit(int id)
         {
             var picterEdit = (from picture in db.pictures
@@ -75,6 +76,7 @@ namespace gallery.Controllers
         // POST: /AndminPic/Edit/5
 
         [HttpPost]
+        [Authorize(Roles = "Admins")]
         public ActionResult Edit(int id, FormCollection collection)
         {
             var picterEdit = (from picture in db.pictures
@@ -94,7 +96,7 @@ namespace gallery.Controllers
 
         //
         // GET: /AndminPic/Delete/5
- 
+        [Authorize(Roles = "Admins")]
         public ActionResult Delete(int id)
         {
             var picterDel = (from picture in db.pictures
@@ -107,6 +109,7 @@ namespace gallery.Controllers
         // POST: /AndminPic/Delete/5
 
         [HttpPost]
+        [Authorize(Roles = "Admins")]
         public ActionResult Delete(int id, FormCollection collection)
         {
             var picterDel = (from picture in db.pictures
