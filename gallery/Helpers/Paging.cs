@@ -39,8 +39,8 @@ namespace gallery.Helpers
 
 
         public static MvcHtmlString AjaxPagingNavigator(this AjaxHelper helper, string updateTargetId,
-         int pageNum, int itemsCount, int pageSize, int linksPerPage = 10,
-         string actionName = "/Gallery")
+            int pageNum, int itemsCount, int pageSize, int linksPerPage = 10,
+            string actionName = "Gallery")
         {
             StringBuilder sb = new StringBuilder();
             int pagesCount = (int)Math.Ceiling((double)itemsCount / pageSize);
@@ -135,7 +135,7 @@ namespace gallery.Helpers
 
             sb.Append(" ");
 
-            if (pageNum < pagesCount )
+            if (pageNum < pagesCount - 1)
             {
                 int pageNextNum = startPage + visiblePages;
                 if (pageNextNum < pagesCount)
@@ -158,7 +158,6 @@ namespace gallery.Helpers
 
             return MvcHtmlString.Create(sb.ToString());
         }
-
 
     }
 }

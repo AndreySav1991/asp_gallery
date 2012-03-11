@@ -10,7 +10,7 @@ namespace gallery.Controllers
     public class HomeController : Controller
     {
         private pictersDBEntities db = new pictersDBEntities();
-        private int pageSize = 5;
+        private const int pageSize = 5;
 
 
         public ActionResult Index()
@@ -21,9 +21,10 @@ namespace gallery.Controllers
 
         public ActionResult Gallery(int pageNum = 0)
         {
-            ViewData["pageNum"] = pageNum;
-            ViewData["itemsCount"] = db.pictures.Count();
-            ViewData["pageSize"] = pageSize;
+            int itemsCount = db.pictures.Count();
+            ViewData["PageSize"] = pageSize;
+            ViewData["PageNum"] = pageNum;
+            ViewData["ItemsCount"] = itemsCount;
             
             var picters = (from picture in db.pictures orderby picture.nazva  select picture)
                 .Skip(pageSize*pageNum).Take(pageSize).ToList();
