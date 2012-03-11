@@ -75,6 +75,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Paging.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\pictersDB.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -93,6 +94,7 @@
     <Content Include="App_Data\pictersDB_log.ldf">
       <DependentUpon>pictersDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\img_pic\header.gif" />
     <Content Include="Content\pict\0.jpg" />
     <Content Include="Content\pict\1.jpg" />
     <Content Include="Content\pict\10.jpg" />
@@ -127,6 +129,7 @@
     <Content Include="Views\Home\Contact.aspx" />
     <Content Include="Views\Home\Details.aspx" />
     <Content Include="Views\Home\Gallery.aspx" />
+    <Content Include="Views\Home\GalleryPage.ascx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\EditorTemplates\picture.ascx" />
     <Content Include="Web.config" />

@@ -10,6 +10,8 @@ namespace gallery.Controllers
     public class HomeController : Controller
     {
         private pictersDBEntities db = new pictersDBEntities();
+        private int pageSize = 5;
+
 
         public ActionResult Index()
         {
@@ -17,10 +19,24 @@ namespace gallery.Controllers
             return View(picters);
         }
 
-        public ActionResult Gallery()
+        public ActionResult Gallery(int pageNum = 0)
         {
-            var picters = (from picture in db.pictures select picture).ToList();
-            return View(picters);
+            ViewData["pageNum"] = pageNum;
+            ViewData["itemsCount"] = db.pictures.Count();
+            ViewData["pageSize"] = pageSize;
+            
+            var picters = (from picture in db.pictures orderby picture.nazva  select picture)
+                .Skip(pageSize*pageNum).Take(pageSize).ToList();
+
+            if (!Request.IsAjaxRequest())
+            {
+
+                return View(picters);
+            }
+            else
+            {
+                return PartialView("GalleryPage",picters);
+            }
         }
 
         public ActionResult Details(int id = 2)

@@ -82,13 +82,13 @@ padding:0
     <form id="form1" runat="server">
     <table style="width: 100%;" border="2" align="left" valign="top">
           <tr>
-            <td> test </td>
+            <td> <img src="/Content/img_pic/header.gif" height="150" width="1200" /> </td>
          </tr>
          <tr>
             <td height="22">
               <table width="100%" border="2" align="left" valign="top">
              <tr>
-               <td width="25%">
+               <td width="10%">
                  <ul>
                    <li><a href="/">Головна</a></li>
                    <li><a href="/Home/Gallery">Купити картину</a></li>
