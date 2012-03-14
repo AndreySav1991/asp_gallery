@@ -72,6 +72,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AndminPicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -83,6 +84,11 @@
       <DependentUpon>pictersDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\picture.cs" />
+    <Compile Include="Models\Users1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Users.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +138,7 @@
     <Content Include="Views\Home\GalleryPage.ascx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\EditorTemplates\picture.ascx" />
+    <Content Include="Views\User\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -172,6 +179,10 @@
   <ItemGroup>
     <None Include="images\Thumbs.db" />
     <Content Include="Views\Shared\AdminPic.Master" />
+    <EntityDeploy Include="Models\Users.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Users1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
