@@ -9,8 +9,8 @@ namespace gallery.Controllers
 {
     public class UserController : Controller
     {
-        private pictersDBEntities1 db1 = new pictersDBEntities1();
-        private pictersDBEntities db = new pictersDBEntities();
+        pictersDB db1 = new pictersDB();
+        
        
 
 

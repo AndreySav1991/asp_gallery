@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pictersDBModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="pictersDBModel1StoreContainer">
+          <EntitySet Name="pictures" EntityType="pictersDBModel1.Store.pictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ques" EntityType="pictersDBModel1.Store.ques" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="pictersDBModel1.Store.Users" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nazva" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="avtor" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ques">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nchar" MaxLength="100" />
+          <Property Name="email" Type="nchar" MaxLength="100" />
+          <Property Name="question" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nchar" MaxLength="109" />
+          <Property Name="email" Type="nchar" MaxLength="20" />
+          <Property Name="adress" Type="nchar" MaxLength="300" />
+          <Property Name="tel" Type="nchar" MaxLength="17" />
+          <Property Name="id_pic" Type="nchar" MaxLength="10" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pictersDBModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="pictersDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="pictures" EntityType="pictersDBModel1.pictures" />
+          <EntitySet Name="ques" EntityType="pictersDBModel1.ques" />
+          <EntitySet Name="Users" EntityType="pictersDBModel1.Users" />
+        </EntityContainer>
+        <EntityType Name="pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazva" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="avtor" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="img" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="ques">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="question" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="109" Unicode="true" FixedLength="true" />
+          <Property Name="email" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="adress" Type="String" MaxLength="300" Unicode="true" FixedLength="true" />
+          <Property Name="tel" Type="String" MaxLength="17" Unicode="true" FixedLength="true" />
+          <Property Name="id_pic" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pictersDBModel1StoreContainer" CdmEntityContainer="pictersDB">
+          <EntitySetMapping Name="pictures"><EntityTypeMapping TypeName="pictersDBModel1.pictures"><MappingFragment StoreEntitySet="pictures">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="nazva" ColumnName="nazva" />
+            <ScalarProperty Name="avtor" ColumnName="avtor" />
+            <ScalarProperty Name="img" ColumnName="img" />
+            <ScalarProperty Name="price" ColumnName="price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ques"><EntityTypeMapping TypeName="pictersDBModel1.ques"><MappingFragment StoreEntitySet="ques">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="question" ColumnName="question" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="pictersDBModel1.Users"><MappingFragment StoreEntitySet="Users">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="adress" ColumnName="adress" />
+            <ScalarProperty Name="tel" ColumnName="tel" />
+            <ScalarProperty Name="id_pic" ColumnName="id_pic" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Ques">
+        <EntityTypeShape EntityType="pictersDBModel1.pictures" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7566536458333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="pictersDBModel1.ques" Width="1.5" PointX="2.75" PointY="2.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="pictersDBModel1.Users" Width="1.5" PointX="5.75" PointY="0.875" Height="1.9210009765624996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -72,6 +72,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AndminPicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -84,6 +85,11 @@
       <DependentUpon>pictersDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\picture.cs" />
+    <Compile Include="Models\Ques.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ques.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Users1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +143,9 @@
     <Content Include="Views\Home\Gallery.aspx" />
     <Content Include="Views\Home\GalleryPage.ascx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Ques\Create.aspx" />
+    <Content Include="Views\Ques\Delete.aspx" />
+    <Content Include="Views\Ques\Index.aspx" />
     <Content Include="Views\Shared\EditorTemplates\picture.ascx" />
     <Content Include="Views\User\Index.aspx" />
     <Content Include="Web.config" />
@@ -182,6 +191,10 @@
     <EntityDeploy Include="Models\Users.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Users1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Models\Ques.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Ques.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

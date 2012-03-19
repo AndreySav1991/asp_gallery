@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pictersDBModel2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="questionDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ques" EntityType="pictersDBModel2.ques" />
+  </EntityContainer>
+  <EntityType Name="ques">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+    <Property Name="email" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+    <Property Name="question" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/AdminPic.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<gallery.Models.User>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/AdminPic.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<gallery.Models.Users>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Index
@@ -6,26 +6,26 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Замовники</h2>
+    <h2>Список покупців</h2>
 
-    <table border ="2">
+    <table border="2">
         <tr>
             <th></th>
 
             <th>
-                Імя
+                П.І.П
             </th>
             <th>
                 Пошта
             </th>
             <th>
-                Адреса
+                Адресса
             </th>
             <th>
                 Телефон
             </th>
             <th>
-                id_pic
+                Картина
             </th>
         </tr>
 
@@ -33,10 +33,10 @@
     
         <tr>
             <td>
-             
+
                 <%: Html.ActionLink("Delete", "Delete", new { id=item.id })%>
             </td>
- 
+
             <td>
                 <%: item.name %>
             </td>
@@ -58,7 +58,9 @@
 
     </table>
 
-  
+    <p>
+        <%: Html.ActionLink("Create New", "Create") %>
+    </p>
 
 </asp:Content>
 

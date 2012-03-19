@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pictersDBModel1StoreContainer" CdmEntityContainer="pictersDB">
+    <EntitySetMapping Name="pictures">
+      <EntityTypeMapping TypeName="pictersDBModel1.pictures">
+        <MappingFragment StoreEntitySet="pictures">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nazva" ColumnName="nazva" />
+          <ScalarProperty Name="avtor" ColumnName="avtor" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ques">
+      <EntityTypeMapping TypeName="pictersDBModel1.ques">
+        <MappingFragment StoreEntitySet="ques">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="question" ColumnName="question" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="pictersDBModel1.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="id_pic" ColumnName="id_pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

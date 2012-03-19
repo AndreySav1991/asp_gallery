@@ -19,6 +19,8 @@
                <td width="25%">
                  <ul>
                    <li><a href="/AndminPic">Головна</a></li>
+                     <li><a href="/User">Покупці</a></li>
+                     <li><a href="/Ques">Питання</a></li>
 
                  </ul>     </td>
                <td width="75%">    <div>

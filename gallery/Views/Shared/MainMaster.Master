@@ -93,6 +93,7 @@ padding:0
                    <li><a href="/">Головна</a></li>
                    <li><a href="/Home/Gallery">Купити картину</a></li>
                    <li><a href="/Home/Contact">Наші контакти</a></li>
+                   <li><a href="/Ques/Create"> Задати питання </a>
 
                  </ul>     </td>
                <td width="75%">    <div>
