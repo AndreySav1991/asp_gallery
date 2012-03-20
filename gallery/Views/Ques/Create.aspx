@@ -6,7 +6,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
  
+     <% Html.EnableClientValidation(); %>
 
+    <% using (Html.BeginForm()) {%>
+        <%: Html.ValidationSummary(true) %>
     
 
     <% using (Html.BeginForm()) {%>
@@ -18,7 +21,7 @@
 
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.name) %>
+                Імя
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.name) %>
@@ -26,7 +29,7 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.email) %>
+                Електронна пошта
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.email) %>
@@ -34,7 +37,7 @@
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.question) %>
+                Питання
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.question) %>
@@ -42,13 +45,13 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Задати" />
             </p>
         </fieldset>
 
     <% } %>
 
-
+        <% } %>
 
 </asp:Content>
 

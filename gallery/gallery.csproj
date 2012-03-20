@@ -85,6 +85,7 @@
       <DependentUpon>pictersDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\picture.cs" />
+    <Compile Include="Models\ques.cs" />
     <Compile Include="Models\Ques.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
