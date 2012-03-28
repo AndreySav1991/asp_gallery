@@ -148,6 +148,7 @@
     <Content Include="Views\Ques\Delete.aspx" />
     <Content Include="Views\Ques\Index.aspx" />
     <Content Include="Views\Shared\EditorTemplates\picture.ascx" />
+    <Content Include="Views\User\Create.aspx" />
     <Content Include="Views\User\Delete.aspx" />
     <Content Include="Views\User\Index.aspx" />
     <Content Include="Web.config" />

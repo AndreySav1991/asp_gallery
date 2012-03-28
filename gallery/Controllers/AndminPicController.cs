@@ -30,7 +30,7 @@ namespace gallery.Controllers
         }
 
         //
-        // GET: /AndminPic/Create
+        // GET: /AndminPic/Create/5
         [Authorize(Roles = "Admins")]
         public ActionResult Create()
         {

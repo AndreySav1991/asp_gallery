@@ -27,27 +27,33 @@ namespace gallery.Controllers
         //
         // GET: /User/Create
 
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            return View();
+            Users user = new Users();
+            user.id_pic = id.ToString();
+            return View(user);
         } 
 
         //
         // POST: /User/Create
-        [Authorize(Roles = "Admins")]
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Users user, int id)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    user.id_pic = id.ToString();
+                    db1.AddToUsers(user);
+                    db1.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ModelState.AddModelError("Неправильні введені дані", ex);
             }
+            return View(user);
         }
         
       
