@@ -26,7 +26,8 @@
     </fieldset>
     <p>
 
-     
+        <a href="/User/Create/<%:Model.id %>">Оформити замовлення</a>
+        <br />
         <%: Html.ActionLink("Назад", "Gallery") %>
     </p>
 
